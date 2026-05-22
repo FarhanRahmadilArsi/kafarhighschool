@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>KAFAR HIGH SCHOOL</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="host_version subpage-theme"> 
+
+	<!-- Modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Customer Login</h4>
+			</div>
+			<div class="modal-body customer-box">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+					<li><a class="active" href="#Login" data-toggle="tab">Login</a></li>
+					<li><a href="#Registration" data-toggle="tab">Registration</a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="Login">
+						<form role="form" class="form-horizontal" method="POST" action="login_proses.php">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email1" name="name" placeholder="Nama Lengkap" type="text" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+										Submit
+									</button>
+									<a class="for-pwd" href="javascript:;">Forgot your password?</a>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="tab-pane" id="Registration">
+						<form role="form" class="form-horizontal" method="POST" action="register_proses.php">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="nama" placeholder="Nama" type="text" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="tgl_lahir" placeholder="Tanggal Lahir" type="date" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="asal_sekolah" placeholder="Asal Sekolah" type="text" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="tahun_lulus" placeholder="Tahun Lulus" type="number" required>
+								</div>
+							</div>
+							<div class="row">							
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">Daftar &amp; Lanjut</button>
+									<button type="reset" class="btn btn-light btn-radius btn-brd grd1">Cancel</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+
+	<!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->	
+
+    <!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">KAFAR HIGH SCHOOL</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="course-grid-2.html" id="dropdown-ekskul" data-toggle="dropdown">EKSTRAKULIKULER </a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-ekskul">
+								<a class="dropdown-item" href="course-grid-2.html">FUTSAL </a>
+								<a class="dropdown-item" href="course-grid-3.html">BASKET </a>
+								<a class="dropdown-item" href="course-grid-4.html">OSIS </a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="blog.html" id="dropdown-blog" data-toggle="dropdown">Blog </a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-blog">
+								<a class="dropdown-item" href="blog.html">Blog </a>
+							
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="teachers.html">Tenaga Didik</a></li>
+						<li class="nav-item active"><a class="nav-link" href="contact.html">Kontak Kami</a></li>
+						<li class="nav-item"><a class="nav-link" href="bukutamu.html">Buku Tamu</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log" href="#" data-toggle="modal" data-target="#login"><span>YUK DAFTAR</span></a></li>
+                    </ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	
+	<div class="all-title-box">
+		<div class="container text-center">
+			<h1>📞☎️KONTAK KAMI📞☎️ <span class="m_1">Kami selalu terbuka untuk pertanyaan, saran, maupun kerja sama. Jangan ragu untuk menghubungi kami.</span></h1>
+		</div>
+	</div>
+	
+    <div id="contact" class="section wb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>BUTUH BANTUAN?
+				 KAMI SELALU HADIR UNTUK ANDA SECARA ONLINE!</h3>
+                <p class="lead">Mari kami berikan detail lebih lanjut tentang penawaran spesial di website yang Anda inginkan. <br>Silahkan isi formulir di bawah ini.
+					</p>
+            </div><!-- end title -->
+
+            <div class="row contact-grid">
+                <div class="col-xl-6 col-md-12 col-sm-12">
+                    <div class="contact_form">
+                        <div id="message"></div>
+                        <form id="contactform" class="" action="contact.php" name="contactform" method="post">
+                            <div class="row row-fluid">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Nama Depan">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Nama Belakang">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Email mu">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" name="phone" id="phone" class="form-control" placeholder="Nomor Hp mu">
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Berikan Keinginan mu??"></textarea>
+                                </div>
+                                <div class="col-lg-12 text-center pd">
+                                    <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Kirim</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div><!-- end col -->
+                <div class="col-xl-6 col-md-12 col-sm-12">
+                    <div class="map-box">
+                      <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4425741844225!2d106.77462137408408!3d-6.208796460819834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f12f08edbf8f%3A0x9e1cf4294cd4a3d3!2sUniversitas%20Mercu%20Buana!5e0!3m2!1sid!2sid!4v1714918742453!5m2!1sid!2sid" 
+                        title="Lokasi Kafar High School"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                      </iframe>
+                    </div>
+                    <div class="contact-info-box">
+                        <h4>Kontak Sekolah</h4>
+                        <p><i class="fa fa-map-marker"></i> Jl. Meruya Selatan, Kembangan, Jakarta Barat</p>
+                        <p><i class="fa fa-envelope"></i> KafarHighSchool@Gmail.com</p>
+                        <p><i class="fa fa-phone"></i> +62 8829 1247 968</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>About US</h3>
+                        </div>
+                        <p> Kafar High School adalah lembaga pendidikan menengah yang berkomitmen untuk mencetak generasi unggul, cerdas, dan berakhlak mulia. Berdiri sejak 2023, sekolah kami telah menjadi tempat tumbuh dan berkembangnya potensi siswa dalam bidang akademik maupun non-akademik...</p>
+                        <div class="footer-right">
+							<ul class="footer-links-soi">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-github"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul><!-- end links -->
+						</div>
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+				<div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Information Link</h3>
+                        </div>
+						<ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        	<li><a href="about.html">Tentang Kami</a></li>
+							<li><a href="contact.html">Kontak Kami</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Contact Details</h3>
+                        </div>
+
+						<ul class="footer-links">
+                            <li><a href="mailto:#">KafarHighSchoool@Gmail.co</a></li>
+                            <li><a href="#">www.kafarhighscchool.com</a></li>
+                            <li>Jl Meruya Selatan Kel.Meruya Selatan Kec.Kembangan Jakarta Barat</li>
+                            <li>+62 8829 1247 968</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-center">
+                    <p class="footer-company-name">Dibuat Oleh Farhan &amp; Dhiika &copy; 2025 <a href="#">KAFAR HIGH SCHOOL</a> Design By KAMI BERDUA</p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+	
+
+	<!-- ALL JS FILES -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+
+    <script src="js/khs-enhance.js"></script>
+</body>
+</html>

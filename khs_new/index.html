@@ -1,0 +1,615 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>KAFAR HIGH SCHOOL</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="host_version"> 
+
+	<!-- Modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">BOOKING BANGKU</h4>
+			</div>
+			<div class="modal-body customer-box">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+					<li><a class="active" href="#Login" data-toggle="tab">Login </a></li>
+					<li><a href="#Registration" data-toggle="tab">REGIS NOW!!</a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="Login">
+						<form role="form" class="form-horizontal" method="POST" action="login_proses.php">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email1" name="name" placeholder="Name" type="text" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">Submit</button>
+									<a class="for-pwd" href="javascript:;">Forgot your password?</a>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="tab-pane" id="Registration">
+						<form role="form" class="form-horizontal" method="POST" action="register_proses.php">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="nama" placeholder="Nama" type="text" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="tgl_lahir" placeholder="Tanggal Lahir" type="date" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="asal_sekolah" placeholder="Asal Sekolah" type="text" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="tahun_lulus" placeholder="Tahun Lulus" type="number" required>
+								</div>
+							</div>
+							<div class="row">							
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">Daftar &amp; Lanjut</button>
+									<button type="reset" class="btn btn-light btn-radius btn-brd grd1">Cancel</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->	
+	
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-ekskul" data-toggle="dropdown">EKSTRAKULIKULER </a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-ekskul">
+								<a class="dropdown-item" href="course-grid-2.html">FUTSAL </a>
+								<a class="dropdown-item" href="course-grid-3.html">BASKET</a>
+								<a class="dropdown-item" href="course-grid-4.html">OSIS </a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-blog" data-toggle="dropdown">Blog </a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-blog">
+								<a class="dropdown-item" href="blog.html">Blog </a>	
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="teachers.html">Tenaga Didik</a></li>
+						<li class="nav-item"><a class="nav-link" href="contact.html">Kontak Kami</a></li>
+						<li class="nav-item"><a class ="nav-link"href="bukutamu.html">Buku Tamu</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>YUK DAFTAR</span></a></li>
+                    </ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	
+	<div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false" >
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="1"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="carousel-item active">
+				<div id="home" class="first-section" style="background-image:url('images/slider-01.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-right">
+									<div class="big-tagline">
+										<h2><strong>KAFAR </strong> HIGH SCHOOL</h2>
+										<p class="lead">Moto kami: "Berprestasi, Berkarakter, dan Berwawasan Global", menjadi landasan dalam setiap langkah pendidikan yang kami tempuh.
+
+                                            . </p>
+											<a href="contact.html" class="hover-btn-new"><span>Contact Us</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="about.html" class="hover-btn-new"><span>Read More</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('images/slider-02.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-left">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight">KAFAR <strong>HIGH SCHOOL</strong></h2>
+										<p class="lead" data-animation="animated fadeInLeft">Moto kami: "Berprestasi, Berkarakter, dan Berwawasan Global", menjadi landasan dalam setiap langkah pendidikan yang kami tempuh.
+
+                                            . </p>
+											<a href="contact.html" class="hover-btn-new"><span>Contact Us</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="about.html" class="hover-btn-new"><span>Read More</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('images/slider-03.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-center">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight"><strong>KAFAR HIGH</strong> SCHOOL</h2>
+										<p class="lead" data-animation="animated fadeInLeft">Moto kami: "Berprestasi, Berkarakter, dan Berwawasan Global", menjadi landasan dalam setiap langkah pendidikan yang kami tempuh.
+                                        </P>
+
+											<a href="contact.html" class="hover-btn-new"><span>Contact Us</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="about.html" class="hover-btn-new"><span>Read More</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<!-- Left Control -->
+			<a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				<span class="fa fa-angle-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+
+			<!-- Right Control -->
+			<a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				<span class="fa fa-angle-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	
+    <div id="overviews" class="section wb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>About</h3>
+                    <p class="lead">Kafar High School adalah lembaga pendidikan menengah yang berkomitmen untuk mencetak generasi unggul, cerdas, dan berakhlak mulia. Berdiri sejak 2023, sekolah kami telah menjadi tempat tumbuh dan berkembangnya potensi siswa dalam bidang akademik maupun non-akademik.
+
+                        Dengan dukungan tenaga pendidik profesional, fasilitas yang memadai, serta lingkungan belajar yang kondusif, Kafar High School terus berinovasi untuk memberikan pendidikan terbaik sesuai dengan perkembangan zaman. Kami percaya bahwa setiap siswa memiliki potensi luar biasa yang dapat diasah melalui bimbingan, keteladanan, dan kesempatan untuk berkembang.
+                        
+                        Moto kami: "Berprestasi, Berkarakter, dan Berwawasan Global", menjadi landasan dalam setiap langkah pendidikan yang kami tempuh.
+                        
+                        </p>
+                </div>
+            </div><!-- end title -->
+        
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h4>2023 KAFAR HIGH SCHOOL</h4>
+                        <h2>SELAMAT DATANG DI KAFAR HIGH SCHOOL</h2>
+                        <p>Kami dengan senang hati menyambut Anda untuk mengenal lebih dekat lingkungan belajar kami yang inspiratif, ramah, dan penuh semangat. Website ini kami hadirkan sebagai sumber informasi bagi siswa, orang tua, guru, dan masyarakat umum mengenai kegiatan, program, serta prestasi yang telah dan akan kami capai bersama.</p>
+
+                        <p> Melalui situs ini, Anda dapat menjelajahi berbagai informasi tentang profil sekolah, visi misi, tenaga pengajar, kegiatan akademik dan non-akademik, serta layanan pendidikan lainnya.
+                            Kami percaya bahwa pendidikan adalah pondasi masa depan, dan bersama Kafar High School, mari wujudkan generasi yang cerdas, berkarakter, dan siap bersaing di era global.. </p>
+
+                        <a href="about.html" class="hover-btn-new orange"><span>Learn More</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/about_02.jpg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+			</div>
+			<div class="row align-items-center">
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/about_03.jpg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>Ekstrakurikuler Terunggul: Futsal</h2>
+                        <p>Futsal merupakan salah satu ekstrakurikuler unggulan di Kafar High School yang paling diminati oleh siswa. Kegiatan ini tidak hanya menjadi wadah untuk menyalurkan hobi dan bakat di bidang olahraga, tetapi juga melatih kedisiplinan, kekompakan, serta semangat sportivitas..</p>
+
+                        <p> Latihan futsal dilaksanakan secara rutin dengan pendampingan dari pelatih berpengalaman. Para siswa juga dibekali dengan teknik dasar, strategi permainan, serta pembinaan mental agar siap bertanding di berbagai ajang kompetisi, baik tingkat sekolah, antar sekolah, hingga turnamen resmi di luar.
+
+                            Berkat semangat dan kerja keras tim, ekstrakurikuler futsal Kafar High School telah berhasil meraih berbagai prestasi membanggakan, menjadikan nama sekolah semakin dikenal di dunia olahraga pelajar.</p>
+
+                        <a href="course-grid-2.html" class="hover-btn-new orange"><span>Learn More</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <section class="section lb page-section">
+		<div class="container">
+			 <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>Our history</h3>
+                    <p class="lead">Sejak awal berdirinya, Kafar High School hadir dengan komitmen kuat untuk menjadi pelopor pendidikan berkualitas yang berbasis teknologi dan nilai-nilai karakter. Dalam perjalanannya, sekolah terus berkembang dan beradaptasi dengan perkembangan zaman demi mencetak generasi yang tangguh, cerdas, dan siap bersaing di tingkat global. Berikut adalah rangkaian tonggak sejarah penting dalam perjalanan Kafar High School dari tahun ke tahun.
+
+                    </p>
+                </div>
+            </div><!-- end title -->
+			<div class="timeline">
+				<div class="timeline__wrap">
+					<div class="timeline__items">
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-01">
+								<h2>2023 â€“ Pendirian & Akreditasi</h2>
+								<p>Pada akhir 2023, Kafar High School meluncurkan program Coding Camp intensif, memberi siswa landasan kokoh dalam pemrograman modern dan pemecahan masalah digital.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-02">
+								<h2>Akhir 2023 â€“ Masa Orientasi & Budaya Sekolah</h2>
+								<p>Siswa dan guru mengikuti masa orientasi terpadu untuk merumuskan nilai-nilai inti seperti kedisiplinan, kebersamaan, dan toleransi yang menjadi fondasi iklim belajar.
+
+                                </p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-03">
+								<h2>2024 â€“ Pengembangan Fasilitas Sains</h2>
+								<p>Sekolah meresmikan laboratorium sains dengan peralatan standar untuk praktik kimia, fisika, dan biologi, mendukung pembelajaran eksperimental di jenjang SMA.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2>Pertengahan 2024 â€“ Perpustakaan Digital & Ruang Baca</h2>
+								<p>Diresmikan perpustakaan digital lengkap dengan akses e-book dan jurnal pelajaran, serta ruang baca nyaman untuk mendukung budaya literasi siswa.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-01">
+								<h2>Akhir 2024 â€“ Penajaman Kurikulum & Pelatihan Guru</h2>
+								<p>Kurikulum disempurnakan agar lebih menekankan berpikir kritis dan kolaborasi, didukung pelatihan rutin bagi guru untuk metode pengajaran interaktif..</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-02">
+								<h2>Awal 2025 â€“ Peningkatan Prestasi Akademik</h2>
+								<p>Capaian nilai ujian nasional meningkat signifikan, didorong program pendalaman materi dan bimbingan belajar internal yang terstruktur..</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-03">
+								<h2>Pertengahan 2025 â€“ Kegiatan Ekstrakurikuler & Pengabdian Masyarakat</h2>
+								<p>Ekstrakurikuler mulai mengakarâ€”dari olahraga hingga kesenianâ€”serta kegiatan bakti sosial ke masyarakat sekitar untuk mengasah kepedulian sosial siswa.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2>Akhir 2025 â€“ Evaluasi & Rencana Strategis</h2>
+								<p>Dilakukan evaluasi menyeluruh atas semua program dan fasilitas, sekaligus menyusun rencana strategis untuk tahun ajar berikutnya agar terus berkembang.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="section cl">
+		<div class="container">
+			<div class="row text-left stat-wrap">
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-study"></i></span>
+					<p class="stat_count">12000</p>
+					<h3>Students</h3>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-online"></i></span>
+					<p class="stat_count">240</p>
+					<h3>Courses</h3>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-years"></i></span>
+					<p class="stat_count">55</p>
+					<h3>Years Completed</h3>
+				</div><!-- end col -->
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</div><!-- end section -->
+
+    <div id="plan" class="section lb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>TENTUKAN PILIHANMU SEKARANG!!!</h3>
+                <p>Untuk memudahkan orang tua dalam merencanakan pendidikan anak, Kafar High School menyediakan pilihan biaya cicilan pendidikan yang fleksibel sebagai berikut: </p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="message-box">
+                        <ul class="nav nav-pills nav-stacked" id="myTabs">
+                            <li><a class="active" href="#tab1" data-toggle="pill">PILIHAN PAKET</a></li>
+                           
+                        </ul>
+                    </div>
+                </div><!-- end col -->
+            </div>
+
+            <hr class="invis">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tab-content">
+                        <div class="tab-pane active fade show" id="tab1">
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>Rp 8.000.000	</h2>
+                                            <h3>Per Bulan</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>Rp 2.000.000</strong> Uang Pangkal</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>Rp 500.000 x 12 bulan</strong> SPP</p>
+                                            <p><i class="fa fa-database"></i> <strong>BAYAR TIAP BULAN</strong> SISTEM PEMBAYARAN</p>
+                                            
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>Rp 7.400.000	</h2>
+                                            <h3>PAKET PER SEMESTER</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>Rp 2.000.000</strong> Uang Pangkal</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>Rp 2.700.000 x 2 semester</strong> SPP</p>
+                                            <p><i class="fa fa-database"></i> <strong>BAYAR 2x DALAM SETAHUN</strong> SISTEM PEMBAYARAN</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div><!-- end pane -->
+
+                        <div class="tab-pane fade" id="tab2">
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>$477</h2>
+                                            <h3>Year</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
+                                            <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
+                                            <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>$485</h2>
+                                            <h3>Year</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Email Addresses</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>65GB</strong> of Storage</p>
+                                            <p><i class="fa fa-database"></i> <strong>60</strong> Databases</p>
+                                            <p><i class="fa fa-link"></i> <strong>30</strong> Domains</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>$500</h2>
+                                            <h3>Year</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
+                                            <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
+                                            <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end pane -->
+                    </div><!-- end content -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>About US</h3>
+                        </div>
+                        <p>Kafar High School adalah lembaga pendidikan menengah yang berkomitmen untuk mencetak generasi unggul, cerdas, dan berakhlak mulia. Berdiri sejak 2023, sekolah kami telah menjadi tempat tumbuh dan berkembangnya potensi siswa dalam bidang akademik maupun non-akademik</p>   
+						<div class="footer-right">
+							<ul class="footer-links-soi">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-github"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul><!-- end links -->
+						</div>						
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+				<div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Information Link</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                       		<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Contact Details</h3>
+                        </div>
+						<ul class="footer-links">
+                            <li><a href="mailto:#">KafarHighSchoool@Gmail.co</a></li>
+                            <li><a href="#">www.kafarhighscchool.com</a></li>
+                            <li>Jl Meruya Selatan Kel.Meruya Selatan Kec.Kembangan Jakarta Barat</li>
+                            <li>+62 8829 1247 968</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-center">                   
+                    <p class="footer-company-name">Dibuat Oleh Farhan &amp; Dhiika &copy; 2025 <a href="#">KAFAR HIGH SCHOOL</a> Design By KAMI BERDUA</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+	<!-- ALL JS FILES -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="js/all.js"></script>
+    <script src="js/custom.js"></script>
+	<script src="js/timeline.min.js"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
+    <script src="js/khs-enhance.js"></script>
+</body>
+</html>
+

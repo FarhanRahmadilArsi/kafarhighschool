@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buku Tamu - Kafar High School</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/versions.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="bukutamu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="host_version subpage-theme">
+  <header class="top-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">KAFAR HIGH SCHOOL</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbars-host">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="course-grid-2.html" id="dropdown-ekskul">EKSTRAKULIKULER</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown-ekskul">
+                <a class="dropdown-item" href="course-grid-2.html">FUTSAL</a>
+                <a class="dropdown-item" href="course-grid-3.html">BASKET</a>
+                <a class="dropdown-item" href="course-grid-4.html">OSIS</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="blog.html" id="dropdown-blog">Blog</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown-blog">
+                <a class="dropdown-item" href="blog.html">Blog</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="teachers.html">Tenaga Didik</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Kontak Kami</a></li>
+            <li class="nav-item active"><a class="nav-link" href="bukutamu.html">Buku Tamu</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="guestbook-page-banner">
+    <div>
+      <h1>Buku Tamu</h1>
+      <p>Kafar High School</p>
+    </div>
+  </div>
+
+  <div class="guestbook-container">
+    <h1>Buku Tamu Kafar High School</h1>
+    <p>Silakan tinggalkan pesan, kritik, atau kesan Anda untuk sekolah kami.</p>
+    <form action="bukutamu.php" method="post">
+      <input type="text" name="nama" placeholder="Nama Lengkap" required>
+      <input type="text" name="instansi" placeholder="Asal Sekolah / Instansi (Opsional)">
+      <input type="email" name="email" placeholder="Alamat Email" required>
+      <input type="tel" name="telepon" placeholder="Nomor Telepon (Opsional)">
+        <input type="date" name="tanggal_kunjungan" placeholder="tanggal_kunjungan" required>
+      <textarea name="pesan" placeholder="Tulis pesan atau kesan Anda..." rows="5" required></textarea>
+      <label class="checkbox">
+        <input type="checkbox" required> Saya menyetujui penggunaan data ini untuk keperluan internal.
+      </label>
+      <button type="submit" name="tamu">Kirim Pesan</button>
+    </form>
+  </div>
+  <script src="js/all.js"></script>
+  <script src="js/khs-enhance.js"></script>
+</body>
+</html>
+

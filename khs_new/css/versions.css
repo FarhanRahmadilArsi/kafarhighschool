@@ -1,0 +1,72 @@
+/*=== versions.css — Total Overhaul v4.0 (Emerald × Gold) ===*/
+
+/* Loader */
+body.host_version #preloader { background: #022c22 !important; }
+
+/* Navbar */
+body.host_version .top-navbar .bg-light {
+  background: rgba(6,49,34,0.97) !important;
+  border-bottom: 1px solid rgba(52,211,153,.18) !important;
+}
+body.host_version .top-navbar .navbar-light .navbar-nav .nav-link {
+  color: rgba(255,255,255,.75) !important;
+}
+body.host_version .top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link,
+body.host_version .top-navbar .navbar-light .navbar-nav .nav-link:hover {
+  color: #fcd34d !important;
+}
+body.host_version .top-navbar .navbar-light .navbar-nav li .dropdown-menu {
+  background: #022c22 !important;
+  border: 1px solid rgba(52,211,153,.12) !important;
+}
+body.host_version .top-navbar .navbar-light .navbar-nav li .dropdown-menu a { color: rgba(255,255,255,.65) !important; }
+body.host_version .top-navbar .navbar-light .navbar-nav li .dropdown-menu a:hover {
+  background: rgba(217,119,6,.15) !important;
+  color: #fcd34d !important;
+}
+
+/* grd1 */
+body.host_version .grd1 {
+  background: linear-gradient(135deg, #064e3b, #047857) !important;
+  color: #fff !important;
+}
+body.host_version .grd1:hover,
+body.host_version .grd1:focus {
+  background: #f59e0b !important;
+  color: #022c22 !important;
+}
+
+/* stat section */
+body.host_version .stat-wrap { background: transparent !important; }
+body.host_version .icon_wrap {
+  background: rgba(255,255,255,.07) !important;
+  border: 2px solid rgba(52,211,153,.28) !important;
+  color: #fcd34d !important;
+}
+body.host_version .icon_wrap i { color: #fcd34d !important; }
+body.host_version .icon_wrap:hover {
+  background: rgba(217,119,6,.2) !important;
+  border-color: #f59e0b !important;
+}
+body.host_version .stat-wrap p {
+  font-size: 44px !important;
+  color: #fff !important;
+  font-weight: 900 !important;
+  padding-top: 8px !important;
+}
+body.host_version .stat-wrap h3 { color: rgba(255,255,255,.5) !important; }
+
+/* scroll-to-top */
+body.host_version .dmtop { background: #f59e0b !important; color: #022c22 !important; }
+body.host_version .dmtop:hover { background: #fcd34d !important; }
+
+/* footer */
+body.host_version footer.footer { background: #022c22 !important; border-top: 3px solid #f59e0b; }
+body.host_version .copyrights { background: #022c22 !important; border-top: 1px solid rgba(255,255,255,.06) !important; }
+
+/* divider */
+body.host_version .divider-bar { background: #f59e0b !important; }
+
+/* checkdomain */
+body.host_version .checkdomain-wrapper .form-group { background: #065f46 !important; }
+body.host_version .nav-pills > li > a.active:focus { background: #064e3b !important; }

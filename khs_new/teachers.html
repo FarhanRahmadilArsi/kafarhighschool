@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>KAFAR HIGH SCHOOL</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="host_version subpage-theme"> 
+
+	<!-- Modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Customer Login</h4>
+			</div>
+			<div class="modal-body customer-box">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+					<li><a class="active" href="#Login" data-toggle="tab">Login</a></li>
+					<li><a href="#Registration" data-toggle="tab">REGIS NOW!!</a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="Login">
+						<form role="form" class="form-horizontal" method="POST" action="login_proses.php">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email1" name="name" placeholder="Nama Lengkap" type="text" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+										Submit
+									</button>
+									<a class="for-pwd" href="javascript:;">Forgot your password?</a>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="tab-pane" id="Registration">
+						<form role="form" class="form-horizontal" method="POST" action="register_proses.php">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="nama" placeholder="Nama" type="text" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="tgl_lahir" placeholder="Tanggal Lahir" type="date" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="asal_sekolah" placeholder="Asal Sekolah" type="text" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="tahun_lulus" placeholder="Tahun Lulus" type="number" required>
+								</div>
+							</div>
+							<div class="row">							
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">Daftar &amp; Lanjut</button>
+									<button type="reset" class="btn btn-light btn-radius btn-brd grd1">Cancel</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->	
+
+    <!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">KAFAR HIGH SCHOOL</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="course-grid-2.html" id="dropdown-ekskul">EKSTRAKULIKULER </a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-ekskul">
+								<a class="dropdown-item" href="course-grid-2.html">FUTSAL </a>
+								<a class="dropdown-item" href="course-grid-3.html"> BASKET </a>
+								<a class="dropdown-item" href="course-grid-4.html"> OSIS </a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="blog.html" id="dropdown-blog">Blog </a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-blog">
+								<a class="dropdown-item" href="blog.html">Blog </a>
+								
+							</div>
+						</li>
+						<li class="nav-item active"><a class="nav-link" href="teachers.html">Tenaga DIdik</a></li>
+						<li class="nav-item"><a class="nav-link" href="contact.html">Kontak Kami</a></li>
+						<li class="nav-item"><a class="nav-link" href="bukutamu.html">Buku Tamu</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log" href="#" data-toggle="modal" data-target="#login"><span>YUK DAFTAR</span></a></li>
+                    </ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	
+	<div class="all-title-box">
+		<div class="container text-center">
+			<h1>👨🏻‍🏫TENAGA DIDIK👩🏻‍🏫<span class="m_1">Di Kafar High School, kami percaya bahwa guru adalah pilar utama dalam membentuk generasi masa depan.
+				Dengan dedikasi, kesabaran, dan semangat mengajar yang tinggi, para guru kami bukan hanya menyampaikan ilmu, tetapi juga menanamkan nilai-nilai kehidupan, karakter, dan semangat belajar yang tak pernah padam..</span></h1>
+		</div>
+	</div>
+	
+	<div id="teachers" class="section wb">
+        <div class="container">
+            <div class="row">
+				<div class="col-lg-3 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="FISIKA.jpeg">
+							<div class="social">
+								<ul>
+									<li><a href="#" class="fa fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-linkedin"></a></li>
+									<li><a href="#" class="fa fa-skype"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3 class="title">PAK BUDI</h3>
+							<span class="post">GURU FISIKA</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="SAMTONI.jpeg">
+							<div class="social">
+								<ul>
+									<li><a href="#" class="fa fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-linkedin"></a></li>
+									<li><a href="#" class="fa fa-skype"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3 class="title">PAK SAMTONI</h3>
+							<span class="post"> GURU MATEMATIKA</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="mtk.jpeg">
+							<div class="social">
+								<ul>
+									<li><a href="#" class="fa fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-linkedin"></a></li>
+									<li><a href="#" class="fa fa-skype"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3 class="title">BU UTARI</h3>
+							<span class="post">BAHASA INDONESIA</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="AGAMA.jpeg">
+							<div class="social">
+								<ul>
+									<li><a href="#" class="fa fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-linkedin"></a></li>
+									<li><a href="#" class="fa fa-skype"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3 class="title">BU SITI</h3>
+							<span class="post">GURU AGAMA</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-3 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="GURU KIMIA.jpeg">
+							<div class="social">
+								<ul>
+									<li><a href="#" class="fa fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-linkedin"></a></li>
+									<li><a href="#" class="fa fa-skype"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3 class="title">PAK RAKA</h3>
+							<span class="post">GURU KIMIA</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="SENBUD.jpeg">
+							<div class="social">
+								<ul>
+									<li><a href="#" class="fa fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-linkedin"></a></li>
+									<li><a href="#" class="fa fa-skype"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3 class="title">BU RATNA</h3>
+							<span class="post">GURU SENI BUDAYA</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="B INGGRIS.jpeg">
+							<div class="social">
+								<ul>
+									<li><a href="#" class="fa fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-linkedin"></a></li>
+									<li><a href="#" class="fa fa-skype"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3 class="title">MS. MAYA</h3>
+							<span class="post">GURU BAHASA INGGRIS</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="PENJAS.jpeg">
+							<div class="social">
+								<ul>
+									<li><a href="#" class="fa fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-linkedin"></a></li>
+									<li><a href="#" class="fa fa-skype"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3 class="title">PAK RIZKY</h3>
+							<span class="post">GURU PENJASKES</span>
+						</div>
+					</div>
+				</div>
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->	
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>About US</h3>
+                        </div>
+                        <p> Kafar High School adalah lembaga pendidikan menengah yang berkomitmen untuk mencetak generasi unggul, cerdas, dan berakhlak mulia. Berdiri sejak 2023, sekolah kami telah menjadi tempat tumbuh dan berkembangnya potensi siswa dalam bidang akademik maupun non-akademik...</p>
+                        <div class="footer-right">
+							<ul class="footer-links-soi">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-github"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul><!-- end links -->
+						</div>
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+				<div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Information Link</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>kONTAK DETAILS</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:#">KafarHighSchoool@Gmail.co</a></li>
+                            <li><a href="#">www.kafarhighscchool.com</a></li>
+                            <li>Jl Meruya Selatan Kel.Meruya Selatan Kec.Kembangan Jakarta Barat</li>
+                            <li>+62 8829 1247 968</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-center">                   
+                    <p class="footer-company-name">Dibuat Oleh Farhan &amp; Dhiika &copy; 2025 <a href="#">KAFAR HIGH SCHOOL</a> Design By KAMI BERDUA</p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+
+    <script src="js/khs-enhance.js"></script>
+</body>
+</html>

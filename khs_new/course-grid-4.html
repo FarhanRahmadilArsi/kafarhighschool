@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OSIS KAFAR HIGH SCHOOL</title>
+    <meta name="keywords" content=""><meta name="description" content=""><meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/versions.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="js/modernizer.js"></script>
+</head><body class="host_version subpage-theme">
+<div class="modal fade" id="login" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header tit-up">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">PENDAFTARAN ONLINE / BOOKING BANGKU</h4>
+      </div>
+      <div class="modal-body customer-box">
+        <ul class="nav nav-tabs">
+          <li><a class="active" href="#Login" data-toggle="tab">Login</a></li>
+          <li><a href="#Registration" data-toggle="tab">Registrasi Online</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="Login">
+            <form class="form-horizontal" method="POST" action="login_proses.php">
+              <div class="form-group"><div class="col-sm-12"><input class="form-control" name="name" placeholder="Nama Lengkap" type="text" required></div></div>
+              <div class="row"><div class="col-sm-10"><button type="submit" class="btn btn-light btn-radius btn-brd grd1">Submit</button></div></div>
+            </form>
+          </div>
+          <div class="tab-pane" id="Registration">
+            <form class="form-horizontal" method="POST" action="register_proses.php">
+              <input type="hidden" name="program" value="OSIS">
+              <div class="form-group"><div class="col-sm-12"><input class="form-control" name="nama" placeholder="Nama" type="text" required></div></div>
+              <div class="form-group"><div class="col-sm-12"><input class="form-control" name="tgl_lahir" placeholder="Tanggal Lahir" type="date" required></div></div>
+              <div class="form-group"><div class="col-sm-12"><input class="form-control" name="asal_sekolah" placeholder="Asal Sekolah" type="text" required></div></div>
+              <div class="form-group"><div class="col-sm-12"><input class="form-control" name="tahun_lulus" placeholder="Tahun Lulus" type="number" required></div></div>
+              <div class="row"><div class="col-sm-10">
+                <button type="submit" class="btn btn-light btn-radius btn-brd grd1">Daftar &amp; Lanjut</button>
+                <button type="reset" class="btn btn-light btn-radius btn-brd grd1">Cancel</button>
+              </div></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="preloader"><div class="loader-container"><div class="progress-br float shadow"><div class="progress__item"></div></div></div></div>
+<header class="top-navbar">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">KAFAR HIGH SCHOOL</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbars-host">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+          <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" href="course-grid-2.html" id="dd-ekskul">Ekstrakulikuler</a>
+            <div class="dropdown-menu" aria-labelledby="dd-ekskul">
+              <a class="dropdown-item" href="course-grid-2.html">âš½ Futsal</a>
+              <a class="dropdown-item" href="course-grid-3.html">ðŸ€ Basket</a>
+              <a class="dropdown-item  active" href="course-grid-4.html">ðŸ›ï¸ OSIS</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="blog.html" id="dd-blog">Blog</a>
+            <div class="dropdown-menu" aria-labelledby="dd-blog">
+              <a class="dropdown-item" href="blog.html">Blog</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="teachers.html">Tenaga Didik</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Kontak Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="bukutamu.html">Buku Tamu</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>YUK DAFTAR</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="all-title-box">
+  <div class="container text-center">
+    <h1>OSIS KAFAR HIGH SCHOOL</h1>
+    <span class="m_1">Organisasi siswa yang membentuk pemimpin masa depan â€” berani, berkarakter, dan berdampak.</span>
+  </div>
+</div>
+<div id="overviews" class="section wb">
+  <div class="container">
+    <div class="section-title row text-center">
+      <div class="col-md-8 offset-md-2">
+        <h3>Tentang OSIS KHS</h3>
+        <p class="lead">OSIS Kafar High School adalah wadah pengembangan kepemimpinan, kreativitas, dan pengabdian siswa. Kami hadir untuk memberi dampak nyata bagi sekolah dan masyarakat.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="course-item">
+          <div class="image-blog"><img src="kegiatan osis.jpeg" alt="ðŸ¤ Kegiatan Rutin" class="img-fluid"></div>
+          <div class="course-br">
+            <div class="course-title"><h3><a href="#">ðŸ¤ Kegiatan Rutin</a></h3></div>
+            <div class="course-desc"><p>Program OSIS meliputi: Rapat rutin mingguan, penyelenggaraan acara sekolah (Pekan OSIS, HUT Sekolah), kegiatan sosial, forum diskusi siswa, dan koordinasi dengan guru pembina.</p></div>
+            <div class="course-rating">4.5 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i></div>
+          </div>
+          <div class="course-meta-bot">
+            <ul>
+              <li><i class="fa fa-calendar"></i> 6 Bulan</li>
+              <li><i class="fa fa-users"></i> 45 Siswa</li>
+              <li><i class="fa fa-book"></i> 8 Sesi</li>
+            </ul>
+          </div>
+        </div></div>
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="course-item">
+          <div class="image-blog"><img src="prestasi osis.webp" alt="ðŸ¥‡ Prestasi Membanggakan" class="img-fluid"></div>
+          <div class="course-br">
+            <div class="course-title"><h3><a href="#">ðŸ¥‡ Prestasi Membanggakan</a></h3></div>
+            <div class="course-desc"><p>OSIS KHS Terbaik Se-Jakarta Barat 2024 Â· Juara Lomba Kreativitas OSIS Nasional 2023 Â· Penghargaan Program Sosial Terbaik dari Dinas Pendidikan Jakarta Â· OSIS Ramah Anak & Anti Perundungan.</p></div>
+            <div class="course-rating">4.5 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i></div>
+          </div>
+          <div class="course-meta-bot">
+            <ul>
+              <li><i class="fa fa-calendar"></i> 6 Bulan</li>
+              <li><i class="fa fa-users"></i> 45 Siswa</li>
+              <li><i class="fa fa-book"></i> 8 Sesi</li>
+            </ul>
+          </div>
+        </div></div>
+    </div>
+    <hr class="hr3">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="course-item">
+          <div class="image-blog"><img src="pembina osis.jpeg" alt="ðŸ‘¨â€ðŸ« Pembina Profesional" class="img-fluid"></div>
+          <div class="course-br">
+            <div class="course-title"><h3><a href="#">ðŸ‘¨â€ðŸ« Pembina Profesional</a></h3></div>
+            <div class="course-desc"><p>Guru pembina berpengalaman yang membimbing setiap program OSIS dengan penuh dedikasi â€” mendampingi siswa mengembangkan keterampilan kepemimpinan dan kerja sama tim yang nyata.</p></div>
+            <div class="course-rating">4.5 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i></div>
+          </div>
+          <div class="course-meta-bot">
+            <ul>
+              <li><i class="fa fa-calendar"></i> 6 Bulan</li>
+              <li><i class="fa fa-users"></i> 45 Siswa</li>
+              <li><i class="fa fa-book"></i> 8 Sesi</li>
+            </ul>
+          </div>
+        </div></div>
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="course-item">
+          <div class="image-blog"><img src="SINERGIK OSIS REVISI.jpeg" alt="ðŸ§  Sinergi Akademik" class="img-fluid"></div>
+          <div class="course-br">
+            <div class="course-title"><h3><a href="#">ðŸ§  Sinergi Akademik</a></h3></div>
+            <div class="course-desc"><p>OSIS KHS mendorong anggotanya menjaga keseimbangan organisasi dan akademik. Manajemen waktu dan disiplin yang dilatih di OSIS terbukti meningkatkan performa belajar siswa.</p></div>
+            <div class="course-rating">4.5 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i></div>
+          </div>
+          <div class="course-meta-bot">
+            <ul>
+              <li><i class="fa fa-calendar"></i> 6 Bulan</li>
+              <li><i class="fa fa-users"></i> 45 Siswa</li>
+              <li><i class="fa fa-book"></i> 8 Sesi</li>
+            </ul>
+          </div>
+        </div></div>
+    </div>
+    <hr class="hr3">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="course-item">
+          <div class="image-blog"><img src="osiss.jpeg" alt="ðŸ“¸ Dokumentasi & Galeri" class="img-fluid"></div>
+          <div class="course-br">
+            <div class="course-title"><h3><a href="#">ðŸ“¸ Dokumentasi & Galeri</a></h3></div>
+            <div class="course-desc"><p>Setiap momen kegiatan OSIS terabadikan â€” dari Pekan OSIS, kegiatan sosial, forum diskusi, hingga momen kebersamaan yang mempererat persaudaraan antar siswa.</p></div>
+            <div class="course-rating">4.5 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i></div>
+          </div>
+          <div class="course-meta-bot">
+            <ul>
+              <li><i class="fa fa-calendar"></i> 6 Bulan</li>
+              <li><i class="fa fa-users"></i> 45 Siswa</li>
+              <li><i class="fa fa-book"></i> 8 Sesi</li>
+            </ul>
+          </div>
+        </div></div>
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="course-item">
+          <div class="image-blog"><img src="TIM OSIS.jpeg" alt="ðŸ“Œ Bergabunglah!" class="img-fluid"></div>
+          <div class="course-br">
+            <div class="course-title"><h3><a href="#">ðŸ“Œ Bergabunglah!</a></h3></div>
+            <div class="course-desc"><p>Punya jiwa kepemimpinan dan semangat berkontribusi? Daftarkan dirimu saat MPLS dan jadilah bagian dari OSIS Kafar High School â€” organisasi yang menginspirasi dan menggerakkan perubahan.</p></div>
+            <div class="course-rating">4.5 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i></div>
+          </div>
+          <div class="course-meta-bot">
+            <ul>
+              <li><i class="fa fa-calendar"></i> 6 Bulan</li>
+              <li><i class="fa fa-users"></i> 45 Siswa</li>
+              <li><i class="fa fa-book"></i> 8 Sesi</li>
+            </ul>
+          </div>
+        </div></div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-xs-12">
+        <div class="widget clearfix">
+          <div class="widget-title"><h3>Tentang KHS</h3></div>
+          <p>Kafar High School adalah lembaga pendidikan menengah yang berkomitmen mencetak generasi unggul, cerdas, dan berakhlak mulia. Berdiri sejak 2023.</p>
+          <div class="footer-right">
+            <ul class="footer-links-soi">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-github"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-xs-12">
+        <div class="widget clearfix">
+          <div class="widget-title"><h3>Tautan Cepat</h3></div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="teachers.html">Tenaga Didik</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+            <li><a href="bukutamu.html">Buku Tamu</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-xs-12">
+        <div class="widget clearfix">
+          <div class="widget-title"><h3>Kontak Kami</h3></div>
+          <ul class="footer-links">
+            <li><a href="mailto:KafarHighSchool@Gmail.com">KafarHighSchool@Gmail.com</a></li>
+            <li><a href="#">www.kafarhighschool.com</a></li>
+            <li>Jl. Meruya Selatan, Kel. Meruya Selatan, Kec. Kembangan, Jakarta Barat</li>
+            <li>+62 8829 1247 968</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="copyrights">
+  <div class="container">
+    <div class="footer-distributed">
+      <div class="footer-center">
+        <p class="footer-company-name">Dibuat Oleh Farhan &amp; Dhiika &copy; 2025 <a href="index.html">KAFAR HIGH SCHOOL</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="js/all.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/khs-enhance.js"></script>
+</body></html>

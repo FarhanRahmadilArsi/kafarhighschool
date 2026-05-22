@@ -1,0 +1,245 @@
+/*=== bukutamu.css — Total Overhaul v4.0 ===*/
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+*,*::before,*::after{box-sizing:border-box}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(245,158,11,.18), transparent 28%),
+    linear-gradient(135deg, #ecfdf5 0%, #f8fafc 42%, #d1fae5 100%);
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.top-navbar .bg-light {
+  background: linear-gradient(90deg, #022c22 0%, #064e3b 55%, #033826 100%) !important;
+  border-bottom: 1px solid rgba(245,158,11,.28);
+  box-shadow: 0 10px 30px rgba(2,44,34,.22) !important;
+}
+
+.top-navbar .navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px !important;
+  margin-left: 0;
+  color: #fff7ed !important;
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 42%, #059669 100%);
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(245,158,11,.24);
+  text-shadow: 0 1px 0 rgba(2,44,34,.28);
+}
+
+.top-navbar .navbar-brand:hover {
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+.top-navbar .navbar-light .navbar-nav .nav-link {
+  color: rgba(255,255,255,.82) !important;
+}
+
+.top-navbar .navbar-light .navbar-nav .nav-link:hover,
+.top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link {
+  color: #fbbf24 !important;
+}
+
+.top-navbar .navbar-light .navbar-nav .nav-link::after {
+  background: #fbbf24;
+  height: 3px;
+}
+
+.guestbook-page-banner {
+  min-height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background:
+    linear-gradient(140deg, rgba(2,44,34,.76) 0%, rgba(5,150,105,.48) 55%, rgba(245,158,11,.18) 100%),
+    url('images/slider-01.jpg') center center / cover no-repeat;
+  border-bottom: 5px solid #f59e0b;
+}
+
+.guestbook-page-banner h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  color: #fef3c7;
+  text-shadow: 0 3px 18px rgba(2,44,34,.45);
+}
+
+.guestbook-page-banner p {
+  display: inline-block;
+  font-size: 15px;
+  margin: 0;
+  color: #ffffff;
+  background: rgba(2,44,34,.58);
+  border: 1px solid rgba(245,158,11,.28);
+  border-radius: 999px;
+  padding: 8px 18px;
+}
+
+.guestbook-container {
+  max-width: 620px;
+  margin: -42px auto 56px;
+  background: #ffffff;
+  border: 1px solid rgba(6,78,59,.1);
+  border-radius: 16px;
+  box-shadow: 0 24px 64px rgba(2,44,34,.18), 0 8px 24px rgba(2,44,34,.12);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header stripe */
+.guestbook-container::before {
+  content: '';
+  display: block;
+  height: 6px;
+  background: linear-gradient(90deg, #064e3b, #f59e0b, #10b981);
+}
+
+.guestbook-container h1 {
+  font-family: 'Plus Jakarta Sans', serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #064e3b;
+  text-align: center;
+  padding: 36px 36px 4px;
+  margin: 0;
+  letter-spacing: -.02em;
+}
+
+.guestbook-container > p {
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+  padding: 0 36px 28px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+form {
+  padding: 0 36px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 14px;
+  color: #374151;
+  background: #f7faf9;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px 16px;
+  width: 100%;
+  transition: border-color .22s, box-shadow .22s, background .22s;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5,150,105,.14);
+  background: #fff;
+}
+
+input::placeholder,
+textarea::placeholder { color: #9ca3af; }
+
+textarea { resize: vertical; min-height: 110px; }
+
+/* Checkbox */
+label.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: #6b7280;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+label.checkbox input[type="checkbox"] {
+  width: 18px; height: 18px;
+  border: 2px solid #d1fae5;
+  border-radius: 4px;
+  accent-color: #059669;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Submit button */
+button[type="submit"],
+input[type="submit"] {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background: #064e3b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 28px;
+  cursor: pointer;
+  width: 100%;
+  transition: background .22s, transform .22s, box-shadow .22s;
+  margin-top: 6px;
+}
+
+button[type="submit"]:hover {
+  background: #f59e0b;
+  color: #022c22;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(217,119,6,.38);
+}
+
+/* Tabel entri */
+.entries-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+.entries-table th {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #6b7280;
+  padding: 10px 14px;
+  background: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+  text-align: left;
+}
+
+.entries-table td {
+  font-size: 14px;
+  color: #374151;
+  padding: 12px 14px;
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: top;
+}
+
+.entries-table tr:hover td { background: #f0fdf4; }
+
+/* Responsive */
+@media (max-width: 480px) {
+  .guestbook-container h1 { font-size: 20px; padding: 28px 20px 4px; }
+  .guestbook-container > p { padding: 0 20px 20px; }
+  form { padding: 0 20px 28px; gap: 12px; }
+}

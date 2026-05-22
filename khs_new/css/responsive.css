@@ -1,0 +1,62 @@
+/*=== responsive.css — KHS v4.0 ===*/
+
+@media only screen and (min-width:992px) and (max-width:1199px){
+  .top-navbar .navbar-light .navbar-nav .nav-item{ margin:0 8px; }
+}
+
+@media (min-width:768px) and (max-width:991px){
+  .top-navbar .navbar-light .navbar-nav .nav-item{ padding:0; }
+  .top-navbar .navbar-light .navbar-nav .nav-item::after{ display:none; }
+  .top-navbar .navbar-light .navbar-nav .nav-item .nav-link::before{ display:none; }
+  .top-navbar .navbar-light .navbar-nav .nav-item .nav-link::after{ display:none; }
+  .stat-wrap{ text-align:center !important; }
+  body.host_version .stat-wrap .alignleft{ float:none; margin:0 auto; }
+  body.host_version .stat-wrap h3{ margin-bottom:12px; }
+  .pricing-table-header h2{ font-size:24px; }
+  .pricing-table-features{ padding:0 0 16px 0; margin:16px 16px 0; }
+  .pricing-table-features p{ font-size:13px; }
+  .contact_form{ margin-right:0; margin-bottom:30px; }
+  .inner-hmv{ margin-bottom:24px; }
+  .course-item{ margin-bottom:24px; }
+  .blog-item{ margin-bottom:24px; }
+  .our-team{ margin-bottom:24px; }
+}
+
+@media (max-width:767px){
+  .top-navbar .navbar-light .navbar-nav .nav-item{ padding:4px 0; margin:0; }
+  .top-navbar .navbar-light .navbar-nav .nav-item::after{ display:none; }
+  .top-navbar .navbar-light .navbar-nav .nav-item .nav-link::before{ display:none; }
+  .top-navbar .navbar-light .navbar-nav .nav-item .nav-link::after{ display:none; }
+  .all-title-box{ padding:50px 0 40px; }
+  .all-title-box h1{ font-size:22px !important; }
+  .section{ padding:50px 0; }
+  .section-title{ margin-bottom:36px; }
+  .dtab > .container{ padding:100px 20px 60px; }
+  .big-tagline h2{ font-size:clamp(26px,8vw,38px) !important; }
+  .big-tagline .lead{ font-size:15px !important; }
+  .big-tagline a.hover-btn-new{ line-height:44px !important; font-size:11px !important; }
+  .stat-wrap{ text-align:center !important; }
+  .stat-wrap .col-md-4, .stat-wrap .col-sm-4{ justify-content:center; margin-bottom:32px; }
+  body.host_version .stat-wrap .alignleft{ float:none; margin:0 auto; }
+  .pricing-table-features{ padding:0 0 12px; margin:12px 12px 0; }
+  .pricing-table-features p{ font-size:13px; }
+  .pricing-table{ margin-bottom:24px; }
+  .inner-hmv{ margin-bottom:16px; padding:24px 20px; }
+  .hmv-box{ padding:50px 0; }
+  .blog-item{ margin-bottom:20px; }
+  .course-item{ margin-bottom:20px; }
+  .our-team{ margin-bottom:20px; }
+  footer.footer{ padding:50px 0 36px !important; }
+  .widget{ margin-bottom:32px; }
+  .contact_form{ margin-right:0; margin-bottom:24px; }
+  hr.hr3{ margin:28px 0; }
+}
+
+@media (max-width:480px){
+  .navbar-right li a.hover-btn-new{ padding:0 14px !important; font-size:11px !important; line-height:38px !important; }
+  .big-tagline h2{ font-size:26px !important; }
+  .pricing-table-header h2{ font-size:26px; }
+  .stat_count{ font-size:34px !important; }
+  body.host_version .stat-wrap p{ font-size:34px !important; }
+  .all-title-box h1{ font-size:18px !important; }
+}
