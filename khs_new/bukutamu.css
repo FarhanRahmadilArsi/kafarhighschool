@@ -5,6 +5,7 @@
 
 body {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  color: #334155;
   background:
     radial-gradient(circle at top left, rgba(245,158,11,.18), transparent 28%),
     linear-gradient(135deg, #ecfdf5 0%, #f8fafc 42%, #d1fae5 100%);
@@ -26,7 +27,7 @@ body {
   min-height: 44px;
   padding: 0 18px !important;
   margin-left: 0;
-  color: #fff7ed !important;
+  color: #fffbeb !important;
   background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 42%, #059669 100%);
   border-radius: 8px;
   box-shadow: 0 10px 24px rgba(245,158,11,.24);
@@ -34,12 +35,12 @@ body {
 }
 
 .top-navbar .navbar-brand:hover {
-  color: #ffffff !important;
+  color: #f8fafc !important;
   transform: translateY(-1px);
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-link {
-  color: rgba(255,255,255,.82) !important;
+  color: rgba(248,250,252,.86) !important;
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-link:hover,
@@ -58,7 +59,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #fff;
+  color: #f8fafc;
   background:
     linear-gradient(140deg, rgba(2,44,34,.76) 0%, rgba(5,150,105,.48) 55%, rgba(245,158,11,.18) 100%),
     url('images/slider-01.jpg') center center / cover no-repeat;
@@ -69,7 +70,7 @@ body {
   font-size: 42px;
   font-weight: 800;
   margin: 0 0 8px;
-  color: #fef3c7;
+  color: #fffbeb;
   text-shadow: 0 3px 18px rgba(2,44,34,.45);
 }
 
@@ -77,7 +78,7 @@ body {
   display: inline-block;
   font-size: 15px;
   margin: 0;
-  color: #ffffff;
+  color: #f8fafc;
   background: rgba(2,44,34,.58);
   border: 1px solid rgba(245,158,11,.28);
   border-radius: 999px;
@@ -108,7 +109,7 @@ body {
   font-family: 'Plus Jakarta Sans', serif;
   font-size: 26px;
   font-weight: 800;
-  color: #064e3b;
+  color: #034833;
   text-align: center;
   padding: 36px 36px 4px;
   margin: 0;
@@ -117,7 +118,7 @@ body {
 
 .guestbook-container > p {
   font-size: 14px;
-  color: #6b7280;
+  color: #64748b;
   text-align: center;
   padding: 0 36px 28px;
   margin: 0;
@@ -139,7 +140,7 @@ textarea,
 select {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   font-size: 14px;
-  color: #374151;
+  color: #334155;
   background: #f7faf9;
   border: 1.5px solid #e5e7eb;
   border-radius: 8px;
@@ -158,7 +159,7 @@ select:focus {
 }
 
 input::placeholder,
-textarea::placeholder { color: #9ca3af; }
+textarea::placeholder { color: #94a3b8; }
 
 textarea { resize: vertical; min-height: 110px; }
 
@@ -168,7 +169,7 @@ label.checkbox {
   align-items: flex-start;
   gap: 10px;
   font-size: 13px;
-  color: #6b7280;
+  color: #64748b;
   cursor: pointer;
   line-height: 1.5;
 }
@@ -191,7 +192,7 @@ input[type="submit"] {
   letter-spacing: .1em;
   text-transform: uppercase;
   background: #064e3b;
-  color: #fff;
+  color: #f8fafc;
   border: none;
   border-radius: 8px;
   padding: 14px 28px;
@@ -220,7 +221,7 @@ button[type="submit"]:hover {
   font-weight: 800;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: #6b7280;
+  color: #475569;
   padding: 10px 14px;
   background: #f9fafb;
   border-bottom: 2px solid #e5e7eb;
@@ -229,7 +230,7 @@ button[type="submit"]:hover {
 
 .entries-table td {
   font-size: 14px;
-  color: #374151;
+  color: #334155;
   padding: 12px 14px;
   border-bottom: 1px solid #f3f4f6;
   vertical-align: top;
